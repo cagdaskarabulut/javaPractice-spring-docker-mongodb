@@ -13,10 +13,8 @@ import java.util.List;
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("/api/note")
-@Validated
 public class NoteController {
 
-    @Autowired
     NoteRepository noteRepository;
 
     @PostMapping("/")

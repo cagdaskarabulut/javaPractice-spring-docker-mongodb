@@ -1,0 +1,15 @@
+version: "3"
+services:
+  javapracticemongodb:
+    image: mongo:latest
+    container_name: "javapractice-mongodb"
+    ports:
+      - 27017:27017
+  employee:
+    image: javapracticenote
+    container_name: javapracticenote
+    ports:
+      - 8080:8080
+    links: 
+      - javapracticemongodb
+  
